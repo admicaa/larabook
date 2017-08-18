@@ -1,0 +1,562 @@
+/*ahmed ali thabet 
+  css file
+  bassos 
+*/
+.over{
+    overflow-x: auto !important;
+}
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+  .nav-cont{
+      display: none !important;
+
+  }
+  .fa{
+      display: none !important;
+  }
+  .hiddenprint{
+      display: none !important;
+  }
+}
+body{
+    background: #EBEBEB;
+    background-size: cover;
+    font-family: Arial ;
+}
+.container-fluid
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top:25px;
+}
+/*navigation styles*/
+@media (max-width: 992px){
+    .nav-cont{
+        display:none !important;
+        width:80%;
+    }
+    #middle{
+        width:auto !important;
+    }
+    .col-md-hidden{
+        display: block !important;
+
+    }
+    
+}
+.menu-sm{
+    font-size:7.5em !important;
+    color:green;
+    position:fixed;
+    top:1px;
+    z-index: 3;
+}
+.col-md-hidden{
+    display: none;
+}
+.nav-cont{
+    float:right;
+    width:15%;
+    background: #4CAF45;
+    height: 100%;
+    position: fixed;
+    top:0;
+    right:0;
+}
+.nav-ul{
+    list-style: none;
+    padding: 0 !important;
+}
+
+.nav-ul a{
+    display: block;
+    font-size: 2em;
+    background: #4CAF45;
+    color:#fff;
+    width: 80%;
+    border-top:1px #fff solid;
+    box-shadow: 2px 2px 2px #fff;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.nav-ul i{
+    display:block;
+    background: #4CAF45;
+    color: #fff;
+    width: 20%;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+    height:40px;
+    line-height: 40px;
+    border-top:1px #fff solid;
+    box-shadow: 2px 2px 2px #fff;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+@keyframes myani{
+    from{
+        transform: translateX(100px) ;
+
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.myanimate{
+    
+    /*animation: myani .5s linear;*/
+}
+.myanimate a{
+    background: #365acf;
+}
+.myanimate i{
+    background: #365acf;
+}
+.nav-ul a{
+    text-decoration: none;
+
+}
+/*end of nav*/
+#middle .form-control
+{
+    /* center form controls */
+    display: block; 
+
+    margin:0 auto;
+    height: 50px;
+    /* override Bootstrap's 100% width for form controls */
+    width: 100%;
+    text-align:center;
+    background:#666;
+    color:#Fff;
+    font-size: 2em;
+}
+.form-control:focus{
+    background: #777 !important; 
+}
+.form-control:active{
+    background: #777 !important;
+}
+
+#middle{
+    width:86.5%;
+}
+
+#bottom
+{
+    /* shrink bottom's font size */
+    font-size: smaller;
+    /* surround with whitespace */
+    margin: 20px;
+}
+.margin-top{
+
+}
+.myinput{
+    display:block !important;
+    margin:0 auto;
+    text-align:center;
+}
+.inventq{
+    text-align:center;
+    background:#4CAF45;
+    font-size:1.5em;
+    color:#fff;
+    height:50px;
+    line-height: 50px;
+    border : #fff 1px solid;
+    border-bottom: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.inventq:first-child{
+    margin-top:9.5px;
+}
+.inventq:first-child::before{
+    display:block;
+    height:15px;
+    width:15px;
+    position:absolute;
+    content:" ";
+    background:#4CAF45;
+    /*z-index: -1;*/
+    right:50%;
+    top:-7.5px;
+    transform: rotate(45DEG);
+    margin-right:-5%;
+    border-left:#fff 1px solid;
+    border-top:#fff 1px solid;
+}
+.inventq:last-child{
+    border-bottom:1px solid #fff;
+}
+.margin-top-2{
+    margin-top:5px;
+}
+.margin-top-3{
+    margin-top:25px;
+    background: #4CAF50;
+    border: 1px solid #fff;
+}
+.margin-top-3:hover{
+    background: #4CAF45;
+    box-shadow: 2px 2px 2px  #000;
+    border:#EBEBEB 1px solid;
+}
+.margin-top-3:active{
+    background:#12a218;
+}
+.fa-car:hover{
+    color:#fff;
+}
+@media (min-width: 992px){
+    .customer-in{
+        border-left:5px solid #333;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+}
+.margin-bottom-2{
+    margin-bottom: 15px;
+}
+@media (min-width: 992px){
+    .damen{
+        position:absolute;
+        top:15px;
+        left:-10%;
+        border:none !important;
+        margin-top:none !important;
+    }
+}
+.damen{
+    border-top:5px solid #000;
+    border-radius:5px;
+    margin-top:5px;
+}
+/*UI the date picker*/
+.ui-datepicker-title{
+    display:inline-block;
+    width:60%;
+    text-align: center;
+    font-size:2.5em;
+    color:#fff;
+}
+.ui-datepicker-prev{
+    display:inline-block;
+    width:15%;
+    text-decoration:none;
+    font-size:1.5em;
+    padding-left:5px;
+    box-sizing: border-box;
+    position: relative;
+    top:-20%;
+
+}
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover{
+    text-decoration:none;
+}
+.ui-datepicker-next{
+    display: inline-block;
+    width:15%;
+    position:absolute;
+    right:0;
+    text-align:right;
+    text-decoration:none;
+    font-size:1.5em;
+    padding-right:5px;
+    box-sizing: border-box;
+    top:-.9%;
+}
+
+.ui-datepicker-header{
+    background:rgba(0,0,0,.95);
+    height:40px;
+    line-height:40px;
+    border:#EBEBEB 1px solid;
+    border-radius: 10px; 
+}
+.ui-datepicker-calendar{
+    width:100% !important;
+}
+.ui-datepicker-calendar>thead>tr>th{
+    height:45px !important;
+    text-align:center;
+}
+.ui-datepicker-calendar>thead{
+    background:#999 !important; 
+}
+.ui-datepicker-calendar>tbody>tr>td{
+    height:40px;
+    text-align:center;
+    background:#EBEBEB;
+}
+.ui-datepicker-calendar>tbody>tr>td>a{
+    text-decoration:none;
+    font-size:1.3em;
+}
+.ui-datepicker-today{
+    background:#12a218 !important;
+    color:#fff !important;
+}
+.ui-datepicker-today>a{
+    color:#fff !important;
+}
+.ui-datepicker-calendar>tbody>tr>td:hover{
+    background: #333;
+    font:#fff;
+}
+.ui-datepicker-calendar>tbody>tr>td:hover >a{
+    color:#fff !important;
+} 
+.ui-datepicker-other-month{
+    background: rgba(0,0,0,.7) !important;
+    color:#EBEBEB;
+}
+.ui-datepicker{
+    width:75%;
+    margin:0 auto;
+
+}
+@media (min-width: 992px){
+    .ui-datepicker{
+        width:36.8% !important;
+        margin:0 auto;
+        display:block;
+    }
+}
+/*end of date picker*/
+.fa-8x{
+    font-size: 10em !important;
+    display: block !important;
+}
+.failModal{
+    color:#da190b;
+}
+#failModal >.modal-dialog>.modal-content,
+#successModal >.modal-dialog>.modal-content{
+    background: none;
+    border:none;
+    box-shadow: none;
+}
+.succesModal{
+    color:#12a218;
+}
+.hidden{
+    display:none;
+}
+.invent-q2::before{
+    top:7.5% !important;
+}
+#pricelisttable>thead>tr>th{
+    text-align: center !important;
+}
+#pricelist,
+#sheek{
+    max-height: 350px;
+    overflow: auto;
+}
+#totalcost{
+    background: #12a218;
+    color:#fff;
+    font-size:1.5em;
+}
+.good{
+    color:#12a218;
+}
+.bad{
+    color:#da190b;
+}
+label{
+    font-size: 1.5em;
+}
+.fieldset{
+    border-left: 2px solid #333;
+    margin-top:5px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: #CCC;
+    box-shadow: #000 5px 5px 5px;
+}
+.fieldset:nth-child(3n){
+    border:none;
+}
+.fieldset:last-child{
+    margin-bottom:15px;
+}
+.icon1,
+.icon2,
+.iconinput{
+    background: #666;
+    height:56px;
+    line-height: 56px;
+    color:#EBEBEB;
+}
+.icon1{
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: left;
+    vertical-align: middle;
+    transition : .5s linear ;
+}
+.icon2{
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: right;
+    vertical-align: middle;
+    transition : .5s linear ;
+}
+.icon1:hover ,
+.icon2:hover {
+    color:#FFF;
+    background: #12a218;
+}
+.dateinput{
+    width:100%;
+    height:56px;
+    text-align: center;
+    background: #666;
+    border:0;
+    color:#EBEBEB;
+    font-size:4em; 
+}
+.dateinput:active{
+    border: 0;
+    box-shadow: 0;
+    
+}
+.dateinput:focus{
+    outline: none;
+    border :none !important;
+    box-shadow: none !important;
+}
+table.mytable{
+    margin-top:15px;
+}
+table.mytable thead  tr.title th{
+    text-align: center;
+    background: rgba(0,0,0,.75) !important;
+    color:#Fff;
+    font-size: 1.75em;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;
+}
+table.mytable thead  tr.head th{
+    text-align: center;
+    font-size:1.5em;
+    border-left:2px solid #DDD;
+    box-sizing: border-box;
+}
+table.mytable thead  tr.head th:first-child{
+    border-left:none;
+}
+table.mytable tbody tr td {
+    border-left:2px #DDD solid;
+    font-size: 1.5em;
+    color:#000;
+}
+table.mytable tbody  tr td:first-child{
+    border-left: none;
+}
+table.mytable tbody tr td a{
+    color:#365acf;
+}
+table.mytable tbody tr td a:hover{
+    text-decoration:none;
+}
+table.mytable tbody  tr.foot td{
+    text-align: center;
+    background: rgba(0,0,0,.75) !important;
+    color:#Fff;
+    font-size: 1.75em;
+    border:none !important;
+}
+table.mytable tbody  tr.foot td:first-child{
+    border-bottom-left-radius:20px;
+}
+table.mytable tbody  tr.foot td:last-child{
+    border-bottom-right-radius: 20px;
+}
+.green{
+    background: rgba(12, 250, 10, 0.5) !important;
+    cursor: pointer;
+}
+#incomemodal .modal-header{
+    border:none;
+}
+.modal-dialog {
+    left :-7.5% !important;
+}
+.fa-back{
+    background: #666;
+    text-align: center;
+    height: 50px;
+    color: #fff;
+    line-height: 50px;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.fa-input{
+    border:none !important;
+    text-align: right !important;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.fa-bef{
+    padding-right:0;
+}
+.fa-btn{
+    background:none;
+    border:none;
+    border-radius:100%;
+    text-align: right;
+}
+.fa-btn:active{
+    border: none !important;
+}
+.fa-btn:focus{
+    border:none !important;
+    box-shadow: none !important;
+    
+}
+.green-color{
+
+    color:rgba(12, 250, 10, 0.9) !important;
+}
+.credit{
+    cursor:pointer;
+    transition:.52s linear;
+}
+.credit:hover{
+    color:#365acf;
+}
+.border{
+    background:#EBEBEB;
+    border : 2px solid #666;
+    box-shadow: 5px 5px 5px #000;
+}
+
+.mylink{
+    text-decoration: none;
+    font-size:3em;
+    display: block;
+}
+.mylink:hover{
+    text-decoration: none;
+}
+.mota{
+    background: #d9534f;
+    border : 2px solid #d43f3a;
+    border-radius: 100%;
+    
+}

@@ -1,0 +1,45 @@
+.forum-container{
+    border: 3px solid #EEE;
+    border-radius:15px;
+    background: #EBEBEB;
+
+}
+.forum-container label{
+    float:right;
+}
+
+.forum-container input{
+    text-align: right;
+}
+table.mytable{
+    border:3px solid #EEE;
+    border-radius:15px;
+    background: #EBEBEB;
+    margin-top:15px;
+}
+.thumbnail img{
+     max-height:150px;
+     
+}
+.price{
+    font-weight: bold;
+    font-size:16px;
+    line-height: 34px;
+}
+.description{
+    color:#7f7f7f;
+    line-height: 30px;
+    text-align: justify;
+    min-height: 150px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+.signup-form{
+    background: #EBEBEB;
+    border-radius: 5px;
+    vertical-align: middle;
+    
+}
+.thumbnail{
+    overflow-y: auto;
+}
