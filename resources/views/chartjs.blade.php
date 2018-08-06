@@ -1,58 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script>
-        
-        @include('scriptsrc')
-    </script>
-    
-</head>
+        <script type="text/javascript">
+            function init() {
+                google.load("visualization", "1.1", { packages:["corechart"], callback: 'drawCharts' });
+            }
 
-<body>
-    <canvas id="myChart" width="400" height="400"></canvas>
-    
-    
-    <script>
-                window.onload = function () {
-            // console.log(document.getElementById("myChart"))
-            var ctx = document.getElementById("myChart").getContext("2d");
+            function drawCharts() {
+                drawAccountImpressions('chart-account-impressions');
+            }
             
-            var data = {
-                labels: ["January", "February", "March", "April", "May", "June", "July"],
-                datasets: [{
-                        label: "My First dataset",
-                        fillColor: "rgba(220,220,220,0.2)",
-                        strokeColor: "rgba(220,220,220,1)",
-                        pointColor: "rgba(220,220,220,1)",
-                        pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(220,220,220,1)",
-                        data: [65, 59, 80, 81, 56, 55, 40]
+            function drawAccountImpressions(containerId) {
+            	var data = google.visualization.arrayToDataTable([
+                    ['Day', 'This month', 'Last month'],
+                    ['01', 1000, 400],
+                    ['05', 800, 700],
+                    ['09', 1000, 700],
+                    ['13', 1000, 400],
+                    ['17', 660, 550],
+                    ['21', 660, 500],
+                    ['23', 750, 700],
+                    ['27', 800, 900]
+                ]);
+
+                var options = {
+                    width: 700,
+                    height: 400,
+                    hAxis: { title: 'Day',  titleTextStyle: { color: '#333' } },
+                    vAxis: { minValue: 0 },
+                    curveType: 'function',
+                    chartArea: {
+                        top: 30,
+                        left: 50,
+                        height: '70%',
+                        width: '100%'
                     },
-                    {
-                        label: "My Second dataset",
-                        fillColor: "rgba(151,187,205,0.2)",
-                        strokeColor: "rgba(151,187,205,1)",
-                        pointColor: "rgba(151,187,205,1)",
-                        pointStrokeColor: "#fff",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(151,187,205,1)",
-                        data: [28, 48, 40, 19, 86, 27, 90]
-                    }
-                ]
-            };
-            var options = {}
-            var myLineChart = new Chart(ctx).Line(data, options);
+                    legend: 'bottom'
+                };
 
-
-        }
-
-    </script>
-</body>
-
+                var chart = new google.visualization.LineChart(document.getElementById(containerId));
+                chart.draw(data, options);
+            }
+        </script>
+    </head>
+    
+    <body onload="init()">
+    	<div id="chart-account-impressions"></div>
+    </body>
 </html>
